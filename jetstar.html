@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <style>
+        body{ text-align: center;background-color: beige;margin-top: 100px;}
+        #Counter{
+            font-size: 30px;
+            margin: 90px 0px;
+        }
+        #btninc{
+            padding: 30px 80px;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(122, 252, 122);
+        }
+        #btndec{
+            padding: 30px 80px;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(252, 122, 122);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click Counter</h1>
+    <div id="counter">Clicked: 0</div>
+    <button id="btninc">Increase</button>
+    <button id="btndec">Decrease</button>
+    <script>
+        let count = 0;
+        var btninc = document.getElementById("btninc");
+        var btndec = document.getElementById("btndec");
+        var counter = document.getElementById("counter");
+        btninc.onclick = function() {
+            count++;
+            counter.innerHTML = "Clicked: " + count;
+
+        }
+        btndec.onclick = function(){
+            count--;
+            counter.innerHTML = "Clicked: " + count;
+
+        }
+
+    </script>
+</body>
+
+</html>
